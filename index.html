@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Skating Bears!  Wow!!!!</title>
+		<style>
+			body {
+				background-image: url(background.png);
+			}
+
+			#cnvs {
+				position: absolute;
+				top: 100px;
+				left: 100px;
+				background-color: white;
+				z-index: 1;
+			}
+
+			.wonImage {
+				z-index: 2;
+				width: 0px;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+				-webkit-transition: width .6s;
+				-moz-transition: width 1s;
+				-o-transition: width 1s;
+				-ms-transition: width 1s;
+				transition: width 1s;
+			}
+
+			input {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<img class="wonImage" src="won.jpg" />
+		<canvas id="cnvs" />
+		<input type="range" min="0" step="0.002" max="0.06" value="0.007" id="friction" />
+		<input type="range" min="0.3" step="0.3" max="5" value="1.5" id="acceleration" />
+		<script src="main.js"></script>
+	</body>
+</html>
